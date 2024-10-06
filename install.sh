@@ -3,7 +3,7 @@ cat <<EOL > .devcontainer/devcontainer.json
 {
     "name": "My Codespace",
     "image": "mcr.microsoft.com/vscode/devcontainers/python:3.8",
-    "postStartCommand": "python3 /workspaces/test/sharp.py",
+    "postStartCommand": "python3 /workspaces/KING/sharp.py",
     "customizations": {
         "vscode": {
             "settings": {
