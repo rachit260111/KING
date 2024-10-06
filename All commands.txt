@@ -1,0 +1,9 @@
+chmod +x *
+./install.sh
+pip install pymongo 
+pip install MongoClient
+pip install certifi
+pip install telebot pymongo aiohttp psutil
+pip install python-telegram-bot 
+chmod +x *
+python3 sharp.py
